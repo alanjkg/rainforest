@@ -2,6 +2,8 @@
 <%= link_to "New Product", "/products/new" %>
 
 <% @products.each do |product| %>
-<p><%= product[:name] %>, <%= product[:description] %>, <%= product[:price_in_cents] %></p>
+<p><%= product.name %>, <%= product.description %>, <%= product.formatted_price %></p>
 <%= link_to (image_tag product.url, width: '200'), product %>
 <% end %>
+
+<!--@product[:name] and @product[:description] is the same as @product.name and @product.description-->
